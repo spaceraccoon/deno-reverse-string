@@ -37,14 +37,11 @@ export const TestReverseWorkflow = DefineWorkflow({
   description: "test the reverse function",
   input_parameters: {
     properties: {
-      interactivity: {
-        type: Schema.slack.types.interactivity,
-      },
       channel: {
         type: Schema.slack.types.channel_id,
       },
     },
-    required: ["interactivity"],
+    required: [],
   },
 });
 
