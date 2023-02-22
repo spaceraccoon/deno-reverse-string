@@ -80,5 +80,5 @@ export default Manifest({
   workflows: [TestReverseWorkflow],
   datastores: [DenoTableDatastore],
   outgoingDomains: [],
-  botScopes: ["commands", "chat:write", "chat:write.public"],
+  botScopes: ["commands", "chat:write", "chat:write.public", "reactions:read"],
 });

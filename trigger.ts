@@ -2,16 +2,23 @@ import { Trigger } from "deno-slack-api/types.ts";
 import { TestReverseWorkflow } from "./manifest.ts";
 
 const trigger: Trigger<typeof TestReverseWorkflow.definition> = {
-  type: "shortcut",
-  name: "Reverse a String",
-  description: "Starts the workflow to test reversing a string",
+  type: "event",
+  name: "Reactji response",
+  description: "responds to a specific reactji",
   workflow: "#/workflows/test_reverse",
-  inputs: {
-    interactivity: {
-      value: "{{data.interactivity}}",
+  event: {
+    event_type: "slack#/events/reaction_added",
+    channel_ids: ["C04LUC8M15E"], //loadtest team T04KY22TF8W channel
+    filter: {
+      version: 1,
+      root: {
+        statement: "{{data.reaction}} == sunglasses",
+      },
     },
+  },
+  inputs: {
     channel: {
-      value: "{{data.channel_id}}",
+      value: "C04LUC8M15E", //loadtest team T04KY22TF8W channel
     },
   },
 };
