@@ -503,7 +503,7 @@ const DenoTableDatastore = DefineDatastore({
 
 export default Manifest({
   name: "reverse",
-  description: "Reverse a string in a multi-step workflow",
+  description: "Reverse a string in a multi step wf",
   icon: "assets/default_new_app_icon.png",
   workflows: [TestReverseWorkflow],
   datastores: [DenoTableDatastore],
