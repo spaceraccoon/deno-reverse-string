@@ -3,7 +3,7 @@ import { TestReverseWorkflow } from "./manifest.ts";
 
 const trigger: Trigger<typeof TestReverseWorkflow.definition> = {
   type: "shortcut",
-  name: "Run multi-step workflow",
+  name: "Load test reverse string multi-step workflow",
   description: "Starts the workflow to test reversing a string",
   workflow: "#/workflows/test_reverse",
   inputs: {
