@@ -8,7 +8,7 @@ const trigger: Trigger<typeof TestReverseWorkflow.definition> = {
   workflow: "#/workflows/test_reverse",
   event: {
     event_type: "slack#/events/reaction_added",
-    channel_ids: ["C04KQ5C16FR"], //loadtest team T04KY22TF8W channel
+    channel_ids: ["C04L4HMKSHZ"], //loadtest team T04KY22TF8W channel
     filter: {
       version: 1,
       root: {
